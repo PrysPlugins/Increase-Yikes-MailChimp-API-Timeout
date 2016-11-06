@@ -25,10 +25,10 @@ class JPry_Increase_Yikes_MailChimp_API_Timeout {
 		if ( ! $this->is_mailchimp_plugin_active() ) {
 			return;
 		}
-		
+
 		add_filter( 'http_request_args', array( $this, 'increase_timeout' ), 10, 2 );
 	}
-	
+
 	/**
 	 * Filters the arguments used in an HTTP request.
 	 *
@@ -47,7 +47,7 @@ class JPry_Increase_Yikes_MailChimp_API_Timeout {
 		
 		return $args;
 	}
-	
+
 	/**
 	 * Determine if the Yikes MailChimp plugin is active.
 	 *
