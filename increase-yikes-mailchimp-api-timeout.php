@@ -43,7 +43,9 @@ class JPry_Increase_Yikes_MailChimp_API_Timeout {
 			return $args;
 		}
 		
-		$args['timeout'] = 30;
+		$args['timeout'] = 45;
+		
+		return $args;
 	}
 	
 	/**
