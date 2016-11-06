@@ -38,13 +38,11 @@ class JPry_Increase_Yikes_MailChimp_API_Timeout {
 	 * @return array The filtered args.
 	 */
 	public function increase_timeout( $args, $url ) {
-		// Bail if we're not modifying the right request.
-		if ( false === strpos( $url, 'api.mailchimp.com' ) ) {
-			return $args;
+		// Make sure we're modifying the right request.
+		if ( false !== strpos( $url, 'api.mailchimp.com' ) ) {
+			$args['timeout'] = 45;
 		}
-		
-		$args['timeout'] = 45;
-		
+
 		return $args;
 	}
 
