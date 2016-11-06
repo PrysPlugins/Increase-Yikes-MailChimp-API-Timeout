@@ -3,7 +3,7 @@
  * Plugin Name: Increase Yikes MailChimp API Timeout
  * Plugin URI: https://github.com/PrysPlugins/Increase-Yikes-MailChimp-API-Timeout
  * Description: Increase the time limit for API requests for the Yikes MailChimp Extender plugin to 45 seconds.
- * Version: 1.0
+ * Version: 1.0.0
  * Author: Jeremy Pry
  * Author URI: http://jeremypry.com/
  * License: GPL2
@@ -20,6 +20,8 @@ class JPry_Increase_Yikes_MailChimp_API_Timeout {
 	 * Hook our methods into the appropriate actions and filters.
 	 *
 	 * This should be run on or after the `plugins_loaded` hook.
+	 *
+	 * @since 1.0.0
 	 */
 	public function hooks() {
 		if ( ! $this->is_mailchimp_plugin_active() ) {
@@ -31,6 +33,8 @@ class JPry_Increase_Yikes_MailChimp_API_Timeout {
 
 	/**
 	 * Filters the arguments used in an HTTP request.
+	 *
+	 * @since 1.0.0
 	 *
 	 * @param array  $args An array of HTTP request arguments.
 	 * @param string $url  The request URL.
@@ -49,6 +53,7 @@ class JPry_Increase_Yikes_MailChimp_API_Timeout {
 	/**
 	 * Determine if the Yikes MailChimp plugin is active.
 	 *
+	 * @since 1.0.0
 	 * @return bool
 	 */
 	protected function is_mailchimp_plugin_active() {
